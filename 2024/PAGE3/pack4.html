@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Group</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="styles_pack1.css"> -->
+    <style>
+        /* styles.css */
+
+/* Custom styles for the modal header */
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Custom styles for the modal title */
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Custom styles for the carousel images */
+.carousel-item img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Custom styles for the dropdown menu */
+#includes {
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Convenience Group</h4>
+                   <a href="pack1.html"><button type="button" class="close" data-dismiss="modal">&times;</button></a>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div>
+                        <img src="convenience group.avif" class="d-block w-100" alt="Premium Group">
+                    </div>
+                    <div class="mt-4">
+                        <p id="packagePrice">Price: $450</p>
+                        <div>
+                            <label for="includes">Includes:</label>
+                            <select id="includes" class="form-control">
+                                <option value="active">Active Lane-Management System</option>
+                                <option value="adaptive">Adaptive Cruise-Control with Stop and Go</option>
+                                <option value="automatic">Automatic High-Beam Headlamp</option>
+                                <option value="heated">Heated Second-Row Seats</option>
+                                <option value="parallel">Parallel and Perpendicular Park-Assist with Stop</option>
+                                <option value="rack">Rack Cargo Management System</option>
+                                <option value="rain">Rain-Sensitive Windsheild Wipers</option>
+                                <option value="side">Side Distance Warning</option>
+                                <option value="threesixty">360 Surround View Camera</option>
+                                <option value="second">2nd-Row Manual Window Shades</option>
+                                <option value="wireless">Wireless Charging-Pad</option>
+
+                            </select>
+                        </div>
+                        <div id="description" class="mt-3">
+                            <p>Premium floor mats provide superior comfort and protection.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Add</button>
+                    <a href="pack1.html"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="script_pack1.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const includesDropdown = document.getElementById('includes');
+            const descriptionDiv = document.getElementById('description');
+        
+            const updateDescription = () => {
+                const selectedItem = includesDropdown.value;
+        
+                let description = '';
+                switch (selectedItem) {
+                    case 'active':
+                        description = 'The Active Lane Management System provides steering correction to avoid collision with surrounding vehicles in the driver blind spot.';
+                        break;
+                    case 'adaptive':
+                        description='Adaptive Cruise Control (ACC) with Stop and Go[1] uses sensors to detect objects in its path. If the lane ahead is clear, the set speed is maintained. When slower traffic is detected, the system will automatically adjust to a pre-selected distance using throttle control and limited braking. ACC with Stop and Go will bring the vehicle to a full stop if necessary. Then if you press the resume button or tap the accelerator pedal, Speed Control will re-engage as traffic begins to move.This system is a driver convenience system not a substitute for active driver involvement. The driver must remain aware of traffic conditions and be prepared to use the brakes to avoid collisions.';
+                        break;
+                    case 'automatic':
+                        description='Automatic High-Beam Headlamps detect ambient lighting conditions, including the presence of oncoming headlamps or vehicle taillamps in front of your vehicle, and automatically switch your headlamps from high- to low-beam and back again. This system provides maximum light for night driving and switches to low beam when the vehicle is traveling at or below a certain speed.';
+                        break;
+                    case 'heated':
+                        description='Heated rear seats keep your passengers warm and comfortable on cold days.';
+                        break;  
+                    case 'parallel':
+                        description='Once it identifies a suitably-sized parking space, Parallel and Perpendicular Park Assist with Stop[1] controls only the steering during the parking maneuver. The driver maintains control of the vehicle while the system provides helpful prompts for shifting gears, braking and accelerating as needed. Always look before proceeding. An electronic drive aid is not a substitute for conscientious driving. Always be aware of your surroundings.';
+                        break;
+                    case 'rack':
+                        description='The Jeep® Rack Cargo Management System makes the most of the rear cargo space in your vehicle. This universal module rack offers space-saving solutions.';
+                        break;
+                    case 'rain':
+                        description='The rain-sensing windshield wiper system monitors moisture buildup on your windshield and turns on the wipers automatically so you will never have to take your hands off the wheel to adjust the wiper controls as the rain level increases or decreases. The sensitivity of the system is adjustable.';
+                        break;  
+                    case 'side':
+                        description='The Side Distance Warning System is a parking aid that warns the driver about obstacles on the sides of the vehicle. The feature provides audible and visual alerts.';
+                        break;  
+                    case 'threesixty':
+                        description='The 360º Surround View Camera[1] provides a bird eye view of the area surrounding the vehicle in order to aid you in manuvering around obstacles as well as giving you a greater awareness of your surroundings.Always check entire surroundings visually before proceeding.';
+                        break;
+                    case 'second':
+                        description='Second-row manual window shades are helpful to block out unwanted sun when traveling.';
+                        break;
+                    case 'wireless':
+                        description='Located in the center console, the wireless charging pad provides a docking area for wirelessly charging small tablets or smartphones.';
+                        break;        
+                  
+                  
+                    default:
+                        description = 'Description not available.';
+                        break;
+                }
+                descriptionDiv.textContent = description;
+            };
+        
+            includesDropdown.addEventListener('change', updateDescription);
+        
+            // Initial description update
+            updateDescription();
+        });
+    </script>
+</body>
+</html>

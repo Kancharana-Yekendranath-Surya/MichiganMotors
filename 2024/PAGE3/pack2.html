@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Weather Mat Package</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="styles_pack1.css"> -->
+    <style>
+        /* styles.css */
+
+/* Custom styles for the modal header */
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Custom styles for the modal title */
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Custom styles for the carousel images */
+.carousel-item img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Custom styles for the dropdown menu */
+#includes {
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">All Weather Mat Package</h4>
+                    <a href="pack1.html"><button type="button" class="close" data-dismiss="modal">&times;</button></a>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div>
+                        <img src="all-weather mat package.avif" class="d-block w-100" alt="All Weather Mat Package">
+                    </div>
+                    <div class="mt-4">
+                        <p id="packagePrice">Price: $395</p>
+                        <div>
+                            <label for="includes">Includes:</label>
+                            <select id="includes" class="form-control">
+                                <option value="allSeason">All-Season Floor Mats</option>
+                                <option value="cargoTray">Cargo Tray</option>
+                            </select>
+                        </div>
+                        <div id="description" class="mt-3">
+                            <p>All-season floor mats help protect your interior from dirt, water and grime.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Add</button>
+                    <a href="pack1.html"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="script_pack1.js"></script> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const includesDropdown = document.getElementById('includes');
+    const descriptionDiv = document.getElementById('description');
+
+    const updateDescription = () => {
+        const selectedItem = includesDropdown.value;
+
+        let description = '';
+        switch (selectedItem) {
+            case 'allSeason':
+                description = 'All-season floor mats help protect your interior from dirt, water and grime.';
+                break;
+            case 'cargoTray':
+                description = 'A cargo tray with a raised lip is available to help store items during transport and help protect the interior from liquids and dirt.';
+                break;
+           
+            default:
+                description = 'Description not available.';
+                break;
+        }
+        descriptionDiv.textContent = description;
+    };
+
+    includesDropdown.addEventListener('change', updateDescription);
+
+    // Initial description update
+    updateDescription();
+});
+    </script>
+    
+</body>
+</html>
